@@ -3,9 +3,6 @@ const form = document.getElementById("city-form");
 const result = document.getElementById("result");
 
 // 获取展示城市名、天气信息和气温信息的元素
-const cityElement = document.querySelector(".city");
-const weatherElement = document.querySelector(".weather");
-const temperatureElement = document.querySelector(".temperature");
 
 // 添加表单提交事件监听器
 form.addEventListener("submit", (event) => {
@@ -43,9 +40,11 @@ form.addEventListener("submit", (event) => {
       console.log(data); // 打印响应数据到控制台
 
       // 更新页面上的天气信息
-      cityElement.innerHTML = `🏙城市: ${data.showapi_res_body.cityInfo.c3}`;
-      weatherElement.innerHTML = `🌤天气：${data.showapi_res_body.f1.day_weather}`;
-      temperatureElement.innerHTML = `🌡气温：${data.showapi_res_body.f1.night_air_temperature}℃ ~ ${data.showapi_res_body.f1.day_air_temperature}℃`;
     })
     .catch((error) => console.error(error)); // 处理 API 请求错误
 });
+
+//城市 = data.showapi_res_body.cityInfo.c3
+//天气 = data.showapi_res_body.f1.day_weather
+// 温度(晚上) data.showapi_res_body.f1.night_air_temperature
+// 温度(早上) data.showapi_res_body.f1.day_air_temperature
