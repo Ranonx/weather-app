@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>天气查询应用</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>天气查询应用☀️</h1>
+      <!-- 城市查询表单 -->
+      <form id="city-form">
+        <label for="city">城市：</label>
+        <input type="text" id="city" name="city" placeholder="请输入城市名" />
+        <button type="submit">查询</button>
+      </form>
+      <!-- 天气查询结果 -->
+      <div id="result">
+        <h2 class="city">🏙城市:</h2>
+        <p class="weather">🌤天气：</p>
+        <p class="temperature">🌡气温：</p>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
